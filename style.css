@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 30px;
+    width: 900px;
+    height: 300px;
+    }
+
+.item-g {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #ff6247;
+    color: white;
+    }
+
+.item-g:nth-of-type(1){
+    grid-row: span 2;
+    grid-column: span 2;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+.item-g:nth-of-type(2){
+    grid-column: span 2;
+}
+
+
+.flex {
+    display: flex;
+    gap: 15px;
+    margin: 30px;
+    width: 900px;
+    height: 300px;
+}
+
+.item-f {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #acd7e7;
+    color: black;
+  
+}
+
+.left {
+   display: flex;
+   width: 50%;
+   gap: 15px;
+}
+
+.left > div {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 60px;
+}
+
+
+.right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 50%;
+    gap: 15px;
+}
+
+.right .item-f:nth-of-type(1){
+  flex: 1 0 100%;
+}
+
+.right .item-f:nth-of-type(2){
+    flex: 1 0 auto;
+}
+
+.right .item-f:nth-of-type(3){
+    flex: 1 0 auto;
+}
